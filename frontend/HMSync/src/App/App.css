@@ -1,0 +1,15 @@
+.App {
+    /* dimensions */
+    height: inherit;
+    width: inherit;
+    padding: 0%;
+    margin: 0%;
+
+    /* color */
+    background-color: var(--background-color-60);
+
+    /* properties */
+    display: flex;
+    font-family: var(--header-font-family);
+    font-size: var(--header-font-size);
+}

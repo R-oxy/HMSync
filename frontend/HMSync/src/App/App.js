@@ -1,9 +1,12 @@
+import Login from '../Login/Login';
 import './App.css';
 
 function App() {
 
-  return(
-    <h1>Hello World</h1>
+  return (
+    <div className="App">
+      <Login />
+    </div>
   );
 };
 

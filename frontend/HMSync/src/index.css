@@ -1,5 +1,59 @@
-html {
-    height: 100%;
-    width: 100%;
-    background-color: #f4f3f6;
+:root {
+    /* LOGIN */
+    /* Colors */
+    --background-color-60: rgba(255, 255, 255, 99%);
+    --background-color-30: rgba(102, 76, 219, 70%);/* #A796F2 */;
+    --background-gradient-30: #FB81A0;
+    /* background-color: */ 
+
+
+    /* Fonts */
+    --header-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    --header-font-size: medium;
+    --normal-font: "Inter", sans-serif;
+
+    /* Outline */
+    --border-outline-color: #3e3d40;
+
+    /* Shadow */
+    --main-shadow-color: 5px 5px 10px #bbbac0;
+
+    /* Text */
+    --credentials-text-color: #3a3a3a;
+    --header-text-color: #201d1d;
+
+}
+
+
+html, body, #root {
+    width: 100vw;
+    height: 100vh;
+    margin: 0%;
+    padding: 0%;
+}
+
+/* -------- Responsive modifications -------- */
+@media screen and (max-width: 600px) {
+    .Login {
+        height: 50%;
+        width: 80%;
+        min-height: 350px;
+    }
+
+    .Login > img {
+        display: none;
+    }
+
+    .Login-white {
+        width: 100%;
+        opacity: 70%;
+    }
+    
+}
+
+@media screen and (min-height: 800px) and (max-width: 1300px) {
+    .Login {
+        height: 40%;
+    }
+    
 }

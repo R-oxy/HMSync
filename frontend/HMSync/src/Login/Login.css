@@ -1,0 +1,189 @@
+/* -------- LOGIN -------- */
+
+.Login {
+    /* Border */
+    background-image: linear-gradient(45deg, var(--background-gradient-30), var(--background-color-30), var(--background-color-30), var(--background-gradient-30), var(--background-gradient-30));
+    background-size: cover;
+    background-position: center;
+    border-radius: 2.5em;
+
+    /* Dimensions */
+    /* min-width: 400px;
+    min-height: 300px; */
+    height: calc(100% * 6/10);
+    width: calc(100% * 5/10);
+    padding: 0%;
+    margin: auto;
+    overflow: auto;
+
+    /* Properties */
+    position: relative;
+    /* Shadow */
+    box-shadow: var(--main-shadow-color);
+}
+
+.Login-container {
+    /* Border */
+    border-radius: 2.5em;
+
+    /* Dimensions */
+    width: calc(100% * 5.5/10);
+}
+
+.Login > img {
+    /* Dimensions */
+    position: absolute;
+    width: 47%;
+    height: calc(100% * 0.66);
+    z-index: 3;
+    margin-top: 10%;
+    margin-left: 12%;
+}
+/* -------- White container -------- */
+
+/* -------- White container: Head -------- */
+.Login-white {
+    /* Background */
+    background-color: var(--background-color-60);
+    
+    /* Dimensions */
+    height: 100%;
+    margin-left: auto;
+    position: relative;
+    
+    /* Properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Login-white img {
+    display: flex;
+    position: absolute;
+    width: 80%;
+    height: 27%;
+    top: 0;
+    align-self: center;
+    z-index: 5;
+}
+
+.Login-header {
+    /* Dimensions */
+    width: 100%;
+    height: calc(100% * 1/4);
+    margin: 0%;
+    padding: 0%;
+    z-index: 4;
+    
+    /* Properties */
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.Login-header p {
+    /* Dimensions */
+    width: 80%;
+    height: fit-content;
+    margin-left: 13%;
+    margin-bottom: 4%;
+    color: var(--header-text-color);
+    font-family: var(--header-font-family);
+    font-weight: 600;
+}
+
+/* -------- White container: Form -------- */
+.Login-credentials {
+    /* Dimensions */
+    height: calc(100% * 2/4);
+    width: 100%;
+}
+
+.Login-input {
+    /* Dimensions */
+    height: 100%;
+    width: 80%;
+    margin-left: 13%;
+
+    /* Properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+[for^="credential-"] {
+    /* Dimensions */
+    position: relative;
+    width: 100%;
+    height: 20%;
+    z-index: 10;
+}
+
+[for^="credential-"] span {
+    /* Background */
+    background-image: linear-gradient(to bottom, var(--background-color-60), white);
+
+    /* Dimensions */
+    position: absolute;
+    bottom: 75%;
+    margin-left: 5%;
+    padding: 0% 1%;
+    z-index: 6;
+
+    /* Font */
+    color: var(--credentials-text-color);
+    font-size: 1em;
+    font-weight: 600;
+    font-family: var(--normal-font);
+
+}
+
+[for^="credential-"] input {
+    /* Border */
+    border: 1px solid var(--border-outline-color);
+    border-radius: 5px;
+
+    /* Dimensions */
+    width: 80%;
+    height: 100%;
+}
+
+[for^="credential-"] input:focus {
+    opacity: 90%;
+}
+
+[for^="credential-"] input:hover {
+    opacity: 90%;
+}
+
+.Credential-submit {
+    /* Background */
+    background-color: var(--background-color-30);
+
+    /* Border */
+    border: none;
+    border-radius: 5px;
+
+    /* Dimensions */
+    width: 40%;
+    height: 20%;
+
+    /* Font */
+    font-family: var(--header-font-family);
+    font-size: large;
+    font-weight: 600;
+    color: var(--header-text-color);
+
+    /* Shadow */
+    box-shadow: var(--main-shadow-color);
+}
+
+.Credential-submit:hover {
+    /* background */
+    background-color: #9986ee;
+}
+
+.Credential-submit:active {
+    opacity: 90%;
+}
+
+
