@@ -62,6 +62,28 @@ The system is divided into two main components:
 ## Database Design
 
 The project uses **PostgreSQL** as the relational database to store hotel data. Below is an overview of the entities involved and their relationships:
+Simple, fast routing engine.
+Powerful dependency injection container.
+Multiple back-ends for session and cache storage.
+Expressive, intuitive database ORM.
+Database agnostic schema migrations.
+Robust background job processing.
+Real-time event broadcasting.
+
+##Premium Partners
+Vehikl
+Tighten Co.
+WebReinvent
+Kirschbaum Development Group
+64 Robots
+Curotec
+Cyber-Duck
+DevSquad
+Jump24
+Redberry
+Active Logic
+byte5
+OP.GG
 
 ### Entities:
 - **Hotel**: Stores hotel information like name, address, phone, and check-in/check-out times.
@@ -102,6 +124,9 @@ The project includes a detailed set of UI mockups, which can be found in the `do
 ## Project Setup
 
 ### Backend Setup (Java Spring Boot)
+
+##Code of Conduct
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the Code of Conduct.
 
 1. Clone the repository:
    ```bash
