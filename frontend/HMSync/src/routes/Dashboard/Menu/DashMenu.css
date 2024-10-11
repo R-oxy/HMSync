@@ -1,0 +1,56 @@
+.Dash-menu {
+    /* Border */
+    border-radius: 50px;
+    
+    /* Color */
+    background-color: var(--menu-background-color);
+    
+    /* Dimensions */
+    width: 5%;
+    height: 60%;
+    
+    /* Properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu-item {
+    /* Dimensions */
+    height: fit-content;
+
+    /* Properties */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-collapse {
+    /* Background */
+    background-color: var(--background-color-60);
+
+    /* Font */
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.9);
+
+    /* Properties */
+    display: none;
+    z-index: 5;
+}
+
+.menu-icon:hover + .menu-collapse {
+    /* Properties */
+    display: initial;
+    position: absolute;
+    left: 4em;
+}
+
+.menu-icon {
+    /* Background */
+    background-color: var(--background-color-30);
+
+    /* Font */
+    color: white;
+}

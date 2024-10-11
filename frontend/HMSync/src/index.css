@@ -1,9 +1,12 @@
 :root {
     /* LOGIN */
     /* Colors */
-    --background-color-60: rgba(255, 255, 255, 99%);
-    --background-color-30: rgba(102, 76, 219, 70%);/* #A796F2 */;
+    --homepage-background-color: rgba(219, 232,244, 0.9);
+    --background-color-60: rgba(255, 255, 255, 90%);
+    --background-color-30: rgba(96, 43, 248, 0.9);/* rgba(102, 76, 219, 70%); #A796F2 */
     --background-gradient-30: #FB81A0;
+    --menu-background-color: #602bf8;
+    --dashboard-background-color: white;
     /* background-color: */ 
 
 
@@ -11,16 +14,18 @@
     --header-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     --header-font-size: medium;
     --normal-font: "Inter", sans-serif;
-
-    /* Outline */
-    --border-outline-color: #3e3d40;
-
+    
+    /* Borders */
+    --border-outline-color: rgba(0, 0, 0, 0.2);
+    --header-border-color: rgba(0, 0, 0, 0.2);
+    
     /* Shadow */
     --main-shadow-color: 5px 5px 10px #bbbac0;
-
+    
     /* Text */
     --credentials-text-color: #3a3a3a;
-    --header-text-color: #201d1d;
+    --header-text-color: rgba(17, 17, 17, 0.7);
+    --white-text-color: rgb(241, 234, 234);
 
 }
 
@@ -32,28 +37,3 @@ html, body, #root {
     padding: 0%;
 }
 
-/* -------- Responsive modifications -------- */
-@media screen and (max-width: 600px) {
-    .Login {
-        height: 50%;
-        width: 80%;
-        min-height: 350px;
-    }
-
-    .Login > img {
-        display: none;
-    }
-
-    .Login-white {
-        width: 100%;
-        opacity: 70%;
-    }
-    
-}
-
-@media screen and (min-height: 800px) and (max-width: 1300px) {
-    .Login {
-        height: 40%;
-    }
-    
-}

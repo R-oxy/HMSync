@@ -1,0 +1,26 @@
+.Dash-body {
+    /* Dimensions */
+    width: 89%;
+    height: 100%;
+
+    /* Properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+[class^="display-"] {
+    /* Dimensions */
+    width: 100%;
+
+    /* Border */
+    border: 1px solid;
+}
+
+.display-top {
+    height: 35%;
+}
+
+.display-bottom {
+    height: 60%;
+}

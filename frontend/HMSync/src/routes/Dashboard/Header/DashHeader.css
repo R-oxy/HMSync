@@ -1,0 +1,49 @@
+/* -------- Dashboard: Header -------- */
+
+
+/* -------- Header Logo -------- */
+.header-logo {
+    /* Dimensions */
+    width: 13%;
+    height: 100%;
+
+    /* Properties */
+    display: flex;
+    justify-content: center;
+}
+
+.header-logo > img {
+    /* Dimensions */
+    height: 60%;
+    margin: auto;
+}
+
+/* -------- Header avatar & notification bell -------- */
+.header-avatar-notifications {
+    /* Dimensions */
+    width: 10%;
+    height: 100%;
+    margin-right: 2%;
+
+    /* Border */
+    /* border: 1px solid var(--border-outline-color); */
+
+    /* Properties */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+    /* -------- Notification bell -------- */
+/* .header-notifications {
+    
+} */
+
+    /* -------- Avatar -------- */
+.header-avatar {
+    height: 60%;
+}
+
+.header-avatar > img {
+    height: 100%;
+}

@@ -7,7 +7,7 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: '/'/* path.resolve(__dirname, 'dist') */,
     filename: 'bundle.js'
   },
 
@@ -90,7 +90,9 @@ module.exports = {
     hot: true,
     static: path.resolve(__dirname, 'dist'),
     open: true,
-    port: 5021
+    port: 5021,
+    /* enables Webpack to utilize routes */
+    historyApiFallback: true
   },
 
   plugins: [
