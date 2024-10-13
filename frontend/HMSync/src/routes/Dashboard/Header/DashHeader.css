@@ -12,7 +12,7 @@
     justify-content: center;
 }
 
-.header-logo > img {
+.header-logo img {
     /* Dimensions */
     height: 60%;
     margin: auto;
@@ -24,6 +24,7 @@
     width: 10%;
     height: 100%;
     margin-right: 2%;
+    position: relative;
 
     /* Border */
     /* border: 1px solid var(--border-outline-color); */
@@ -46,4 +47,91 @@
 
 .header-avatar > img {
     height: 100%;
+}
+
+.header-avatar > img:hover {
+    opacity: 0.7;
+}
+
+.logout-tag {
+    /* Border */
+    border: 1px solid;
+    border-radius: 10px;
+
+    /* Dimensions */
+    width: 6em;
+    height: fit-content;
+    position: absolute;
+
+    /* Properties */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 4px 4px 1px rgb(145, 144, 144);
+}
+
+.logout-tag button {
+    /* Background */
+    background-color: var(--background-color-30);
+
+    /* Border */
+    border-color: transparent;
+    border-radius: 5px;
+
+    /* Dimensions */
+    width: 80%;
+    margin-bottom: 0.5em;
+
+    box-shadow: 1px 1px 1px var(--background-color-30);
+
+    /* Font */
+    color: white;
+
+    /* Properties */
+    display: flex;
+    justify-content: center;
+}
+
+.logout-tag p {
+    font: var(--header-text-color);
+    font-size: medium;
+    font-weight: 700;
+    text-align: center;
+}
+
+.logout-tag button:active {
+    box-shadow: none;
+}
+/* .header-notifications {
+    position: relative;
+} */
+.notification-tag {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+
+    /* background */
+    background-color: var(--background-color-60);
+
+    /* Dimensions */
+    position: absolute;
+    top: 5em;
+    z-index: 10;
+    width: 100%;
+    height: fit-content;
+
+    /* Shadows */
+    box-shadow: 1px 1px 1px var(--header-text-color);
+}
+
+.notification-tag p {
+    font: var(--header-text-color);
+    font-size: medium;
+    font-weight: 700;
+    text-align: center;
+}
+
+.header-notifications i:hover {
+    opacity: 0.7;
 }

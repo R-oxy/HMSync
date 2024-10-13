@@ -1,14 +1,17 @@
+/* -------- Dashboard: Main body -------- */
 .Dash-body {
     /* Dimensions */
-    width: 89%;
+    width: 95%;
     height: 100%;
 
     /* Properties */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
+/* General targeting */
 [class^="display-"] {
     /* Dimensions */
     width: 100%;
@@ -17,10 +20,109 @@
     /* border: 1px solid; */
 }
 
-.display-top {
-    height: 35%;
+[class^="display-container-"] {
+    /* Border */
+    border-radius: 10px;
+    /* Dimensions */
+    width: 95%;
+    height: 90%;
+    /* border: 1px solid; */
 }
 
+/* -------- Dashboard: Top section -------- */
+.display-top {
+    /* Dimensions */
+    height: calc(35%);
+    min-height: calc(fit-content + 5px);
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.display-container-top {
+    /* Dimensions */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+
+}
+.dashboard-info {
+    /* Border */
+    border-radius: 20px;
+
+    /* Dimensions */
+    height: 90%;
+    width: 20%;
+    min-width: 244px;
+    min-height: fit-content;
+
+    /* Properties */
+    display: flex;
+    justify-content: center;
+
+    /* Shadows */
+    box-shadow: var(--main-shadow-color);
+}
+
+.dashboard-info-container {
+    height: 95%;
+    width: 90%;
+
+    /* Property */
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.dashboard-info-header {
+    padding: 0%;
+    margin: 0%;
+}
+
+.dashboard-value {
+    /* Dimensions */
+    padding: 0%;
+    margin: 0%;
+    font-size:xx-large;
+    font-weight: 800;
+}
+
+.dashboard-definition {
+    font-size:small;
+    color: var(--credentials-text-color);
+    padding: 0%;
+    margin: 0%;
+}
+
+.dashboard-percentage {
+    height: 1rem;
+    width: 95%;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+.dashboard-bar {
+    height: 100%;
+    border-radius: inherit;
+    background-color: var(--background-color-30);
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* -------- Dashboard: Bottom section -------- */
 .display-bottom {
     height: 60%;
+    display: flex;
+    justify-content: center;
 }
+
+.display-container-bottom {
+    /* Shadows */
+    /* box-shadow: 4px 4px 10px rgba(187, 186, 192, 0.6); */
+}
+
+

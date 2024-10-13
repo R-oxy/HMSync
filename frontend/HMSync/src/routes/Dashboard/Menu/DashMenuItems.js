@@ -1,13 +1,17 @@
-function DashMenuItems({ faName, name }) {
+import { Link } from "react-router-dom";
+
+
+function DashMenuItems({ faName, name, dir }) {
+
+    /* use */
     return (
-        <div className="menu-item">
-
-            <i className={`fa ${faName} fa-2x menu-icon`}>
-                {/* Add a link to redirect ot the correct route */}
-            </i>
-            <h2 className="menu-collapse">{name}</h2>
-
-        </div>
+        <Link to={dir}>
+            {/* Side menu options */}
+            <div className="menu-item">
+                <i className={`fa ${faName} fa-2x menu-icon`} />
+                <h2 className="menu-collapse">{name}</h2>
+            </div>
+        </Link>
     );
 }
 

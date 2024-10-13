@@ -1,14 +1,25 @@
 /* Login Page */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Login.css';
 import loginPageImg from '../../assets/LoginPage/Login-page.png';
 import logo from '../../assets/HMSync-Logo-Black.png';
 import LoginForm from './LoginForm';
+import useIsAuthenticated from 'react-auth-kit/hooks/useIsAuthenticated';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
+  const isAuthenticated = useIsAuthenticated();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate('/');
+    }
+  });
   /* Logs into the server */
   return (
-    
+    <div className="Display-container">
+
       <div className="Login">
         <img src={loginPageImg} alt="Image here" />
         <div className="Login-white">
@@ -22,6 +33,7 @@ function Login() {
           </div>
         </div>
       </div>
+    </div>
   );
 }
 
