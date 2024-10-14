@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <include file="db/changelog/changelog-1.0-identification-document-table.xml"/>
+    <include file="db/changelog/changelog-1.0-users-table.xml"/>
+    <include file="db/changelog/changelog-1.0-token-table.xml"/>
+    <include file="db/changelog/changelog-1.0-rooms-table.xml"/>
+    <include file="db/changelog/changelog-1.0-reviews-table.xml"/>
+    <include file="db/changelog/changelog-1.0-bookings-table.xml"/>
+    <include file="db/changelog/changelog-1.0-transactions-table.xml"/>
+    <include file="db/changelog/changelog-1.0-room-service-table.xml"/>
+    <include file="db/changelog/changelog-1.0-staff-table.xml"/>
+    <include file="db/changelog/changelog-1.0-inventory-table.xml"/>
+    <include file="db/changelog/changelog-1.0-events-table.xml"/>
+    <include file="db/changelog/changelog-1.0-housekeeping-table.xml"/>
+</databaseChangeLog>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="create-bookings-table" author="aron">
+        <createTable tableName="bookings">
+            <column name="id" type="uuid">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="user_id" type="uuid">
+                <constraints nullable="false"/>
+            </column>
+            <column name="room_id" type="uuid">
+                <constraints nullable="false"/>
+            </column>
+            <column name="reservation_date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="check_in_date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="check_out_date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="room_pricing" type="decimal(10, 2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="booking_confirmation" type="boolean">
+                <constraints nullable="false"/>
+            </column>
+            <!-- Audit Fields -->
+            <column name="created_at" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_user" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_user" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint constraintName="fk_bookings_user"
+                                 baseTableName="bookings"
+                                 baseColumnNames="user_id"
+                                 referencedTableName="users"
+                                 referencedColumnNames="user_id"/>
+
+        <addForeignKeyConstraint constraintName="fk_bookings_room"
+                                 baseTableName="bookings"
+                                 baseColumnNames="room_id"
+                                 referencedTableName="rooms"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+</databaseChangeLog>

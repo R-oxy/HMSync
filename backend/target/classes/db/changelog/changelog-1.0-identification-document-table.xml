@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="create-identification-document-table" author="aron">
+        <createTable tableName="identification_documents">
+            <column name="identification_document_id" type="uuid">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <!-- Audit Fields-->
+            <column name="created_at" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_user" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_user" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <sql>
+            INSERT INTO identification_documents(identification_document_id, name, created_at, created_user, updated_at, updated_user)
+            VALUES ('9c72eaa1-a60a-41a2-ba93-5e569b52d771', 'Identification Card', CURRENT_TIMESTAMP, 'liquibase', CURRENT_TIMESTAMP, 'liquibase'),
+                   ('9c72eaa1-a60a-41a2-ba93-5e569b52d772', 'Passport', CURRENT_TIMESTAMP, 'liquibase', CURRENT_TIMESTAMP, 'liquibase');
+        </sql>
+    </changeSet>
+</databaseChangeLog>
