@@ -26,17 +26,23 @@ function DashHeader() {
         navigate('/login');
         
     };
+
+    const linkCSS = {
+        position: 'absolute',
+        height: '100%',
+        width: '100%',
+    };
     return (
         <header className="Dash-header">
             {/* Logo, search bar, notifications, avatar */}
             {/* Logo */}
             <div className="header-logo">
-                <Link to="/dashboard" style={{
-                    height: 'inherit', width: 'inherit', display: 'flex', flexDirection: 'center'}}>
                 <img src={logo} alt="Logo" />
+                <Link to="/dashboard" style={linkCSS}>
                 </Link>
                 {/* link to redirect back to homepage */}
             </div>
+
 
 
             <div className="header-avatar-notifications">

@@ -21,6 +21,7 @@
     
     /* Shadow */
     --main-shadow-color: 5px 5px 10px #bbbac0;
+    --small-windows-shadows: 4px 4px 10px rgba(0, 0, 0, 0.568);
     
     /* Text */
     --credentials-text-color: #3a3a3a;
@@ -35,6 +36,5 @@ html, body, #root {
     height: 100vh;
     margin: 0%;
     padding: 0%;
-    overflow: hidden;
 }
 

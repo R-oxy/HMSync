@@ -1,7 +1,7 @@
 /* -------- Dashboard: Main body -------- */
 .Dash-body {
     /* Dimensions */
-    width: 95%;
+    width: 90%;
     height: 100%;
 
     /* Properties */
@@ -24,45 +24,57 @@
     /* Border */
     border-radius: 10px;
     /* Dimensions */
-    width: 95%;
-    height: 90%;
-    /* border: 1px solid; */
+     /* Dimensions */
+     height: 95%;
+     width: 100%;
+
+ 
+     /* Properties */
+     display: flex;
+     overflow-x: scroll;
+     overflow-y: hidden;
+     /* flex-wrap: wrap; */
+     justify-content: space-between;
 }
 
 /* -------- Dashboard: Top section -------- */
 .display-top {
     /* Dimensions */
-    height: calc(35%);
-    min-height: calc(fit-content + 5px);
+    height: 40%;
+    max-height: 40%;
+} 
+
+.display-top, .display-bottom {
+    width: 100%;
+    min-height: 250px;
+
+    /* Properties */
     display: flex;
     justify-content: center;
-    overflow-y: scroll;
 }
 
 .display-container-top {
-    /* Dimensions */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-
+    min-height: 260px;
 }
+
 .dashboard-info {
     /* Border */
     border-radius: 20px;
+    border: 1px rgba(0, 0, 0, 0.1);
 
     /* Dimensions */
     height: 90%;
     width: 20%;
-    min-width: 244px;
-    min-height: fit-content;
+    margin: 10px;
+    min-width: 200px;
+    min-height: 230px;
 
     /* Properties */
     display: flex;
     justify-content: center;
 
     /* Shadows */
-    box-shadow: var(--main-shadow-color);
+    box-shadow: var(--small-windows-shadows);
 }
 
 .dashboard-info-container {
@@ -72,7 +84,7 @@
     /* Property */
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 .dashboard-info-header {
@@ -84,12 +96,12 @@
     /* Dimensions */
     padding: 0%;
     margin: 0%;
-    font-size:xx-large;
+    font-size: xx-large;
     font-weight: 800;
 }
 
 .dashboard-definition {
-    font-size:small;
+    font-size: small;
     color: var(--credentials-text-color);
     padding: 0%;
     margin: 0%;
@@ -113,16 +125,14 @@
     flex-direction: column;
     justify-content: center;
 }
+
 /* -------- Dashboard: Bottom section -------- */
 .display-bottom {
     height: 60%;
-    display: flex;
-    justify-content: center;
+    min-height: 300px;
 }
 
 .display-container-bottom {
     /* Shadows */
     /* box-shadow: 4px 4px 10px rgba(187, 186, 192, 0.6); */
 }
-
-

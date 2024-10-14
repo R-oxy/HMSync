@@ -1,19 +1,20 @@
 .dash-menu-container {
     /* Background */
     background-color: var(--background-color-30);
-
     
     /* Dimensions */
     height: 100%;
-    width:max-content;
+    width:fit-content;
+    min-width: 4em;
     /* padding: 10px; */
     left:0;
     
     
     /* Properties */
     display: flex;
-    justify-content: center;
-    position: absolute;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    /* position: absolute; */
     
     
     
@@ -21,14 +22,27 @@
     box-shadow: 2px 2px 5px var(--background-color-30);
 }
 
+@media screen and (max-width: 1000px) {
+    
+    .dash-menu-container:hover {
+        position: absolute;
+        z-index: 10;
+    }
+
+    body {
+        width: 100vw;
+    }
+}
+
 .Dash-menu {
     /* Border */
-    border-radius: 20px;
+    /* border-radius: 20px; */
     
     /* Dimensions */
-    width:max-content;
-    height: 50%;
+    width:fit-content;
+    height: fit-content;
     padding: 3px;
+    z-index: 10;
     
     /* Properties */
     display: flex;
@@ -46,13 +60,22 @@
     /* Dimensions */
     height: 3em;
     width: 99%;
-    padding: 1px;
+    margin: 0.15em;
+    padding: 0.15em 0;
+    min-width: 3rem;
 
     /* Properties */
     position: relative;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+}
+
+.fa {
+    background: none;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 0 0.25em;
 }
 
 .menu-item:hover {
@@ -62,7 +85,7 @@
 
 .menu-collapse {
     /* Dimensions */
-    margin: 0 1em;
+    padding: 0 1em;
     width: 100%;
 
     /* Font */
@@ -87,9 +110,6 @@
 }
 
 .menu-icon {
-    /* Background */
-    background-color: var(--background-color-30);
-
     /* Font */
     color: white;
 }

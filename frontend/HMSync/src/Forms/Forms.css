@@ -1,0 +1,111 @@
+.Forms {
+    /* Dimensions */
+    width: 95%;
+    height: 50%;
+
+    /* Properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow-y: auto;
+    flex-grow: 0.9;
+    padding-bottom: 3%;
+}
+
+.Forms-options, .Forms-create-display {
+    /* Background */
+    /* background-color: rgb(226, 223, 223, 0.1); */
+    /* Dimensions */
+    /* min-height: 45%; */
+    /* border: 1px solid; */
+
+    /* Properties */
+    display: flex;
+}
+
+.Forms-options {
+    /* Border */
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    border-radius: 20px 20px 0px 0px;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.3);
+
+    /* Properties */
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    min-height: fit-content;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05);
+}    
+
+.Forms-DisplayOnly {
+    /* border */
+    /* border: 1px solid; */
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.568);
+
+    /* Background */
+    background-color: white;
+
+    /* Dimensions */
+    width: 20%;
+    height: fit-content;
+    min-width: 230px;
+    margin: 8px 15px;
+    padding: 20px 10px;
+    
+
+    /* properties */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+/* -------- Inside Forms-DisplayOnly -------- */
+[class^="label-"] {
+    /* DImensions */
+    margin: 0;
+    padding: 0;
+    
+    /* Properties */
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.wrap-class {
+    display: flex;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-wrap: nowrap;
+    font: var(--normal-font);
+    font-weight: 500;
+    padding: 4px 0;
+    margin: 0;
+}
+
+.label-additional > h4 {
+    font-weight: 700;
+}
+
+.form-search {
+    height: 100px;
+    display: block;
+}
+
+/* --------- Forms-create-display -------- */
+.Forms-create-display {
+    /* Dimensions */
+    min-width: 100%;
+    min-height: 60%; 
+}
+
+/* Waterfall effects */
+.display-off, .hide-Drawer {
+    display: none;
+}
+
+.show-Drawer {
+    display: block;
+}
