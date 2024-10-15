@@ -1,14 +1,11 @@
 package com.HMSync.security.user.service;
 
 import com.HMSync.security.user.controller.dto.ChangePasswordRequestDto;
-import com.HMSync.security.user.controller.dto.UserSearchDto;
 import com.HMSync.security.user.entity.User;
 import com.HMSync.security.user.repository.UserRepository;
-import com.HMSync.security.user.repository.UserSpecification;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -43,9 +40,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Page<User> search(UserSearchDto searchDto, Pageable pageable) {
-        Specification<User> userSpecification = UserSpecification.getPredicate(searchDto);
-        return repository.findAll(userSpecification, pageable);
+    public Page<User> getAll(Pageable pageable) {
+        return repository.findAll(pageable);
     }
 
     @Override

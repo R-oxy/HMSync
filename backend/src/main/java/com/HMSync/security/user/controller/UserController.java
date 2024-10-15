@@ -3,8 +3,6 @@ package com.HMSync.security.user.controller;
 import com.HMSync.authentication.controller.assembler.RegistrationAssembler;
 import com.HMSync.authentication.controller.dto.RegistrationDto;
 import com.HMSync.security.user.controller.dto.ChangePasswordRequestDto;
-import com.HMSync.security.user.controller.dto.UserSearchDto;
-import com.HMSync.security.user.entity.User;
 import com.HMSync.security.user.service.UserService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -15,7 +13,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -41,10 +38,11 @@ public class UserController {
         return ResponseEntity.ok().build();
     }
 
-    @PostMapping("/search")
+    @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public Page<User> search(@RequestBody UserSearchDto searchDto, Pageable pageable) {
-        return service.search(searchDto, pageable);
+    public Page<RegistrationDto> getAll(Pageable pageable) {
+        return service.getAll(pageable)
+                .map(registrationAssembler::toRegistrationDto);
     }
 
     @GetMapping("/{userId}")
@@ -52,5 +50,4 @@ public class UserController {
     public RegistrationDto get(@PathVariable UUID userId) {
         return registrationAssembler.toRegistrationDto(service.get(userId));
     }
-
 }

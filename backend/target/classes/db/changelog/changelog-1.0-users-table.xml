@@ -14,18 +14,6 @@
                 <constraints nullable="false"/>
             </column>
 
-            <column name="created_user" type="VARCHAR(255)">
-                <constraints nullable="true"/>
-            </column>
-
-            <column name="updated_at" type="TIMESTAMP">
-                <constraints nullable="false"/>
-            </column>
-
-            <column name="updated_user" type="VARCHAR(255)">
-                <constraints nullable="true"/>
-            </column>
-
             <column name="first_name" type="VARCHAR(255)">
                 <constraints nullable="false"/>
             </column>

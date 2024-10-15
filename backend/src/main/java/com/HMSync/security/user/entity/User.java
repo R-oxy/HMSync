@@ -4,6 +4,7 @@ import com.HMSync.authentication.entity.IdentificationDocument;
 import com.HMSync.security.jwt.entity.Token;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EntityListeners;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
@@ -17,10 +18,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.data.annotation.CreatedBy;
-import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -37,27 +36,16 @@ import java.util.UUID;
 @Entity
 @Table(name = "users")
 @Accessors(chain = true)
+@EntityListeners(AuditingEntityListener.class)
 public class User implements UserDetails {
     @Id
     @GeneratedValue
     @Column(name = "user_id")
     private UUID userId;
 
-    @CreationTimestamp
+    @CreatedDate
     @Column(name = "created_at")
     private Instant createdAt;
-
-    @CreatedBy
-    @Column(name = "created_user")
-    private String createdUser;
-
-    @UpdateTimestamp
-    @Column(name = "updated_at")
-    private Instant updatedAt;
-
-    @LastModifiedBy
-    @Column(name = "updated_user")
-    private String updatedUser;
 
     @Column(name = "first_name")
     private String firstName;

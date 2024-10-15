@@ -22,17 +22,16 @@ import static org.springframework.security.config.http.SessionCreationPolicy.STA
 @RequiredArgsConstructor
 @EnableMethodSecurity
 public class WebSecurityConfiguration {
-    private static final String[] WHITE_LIST_URL = {"/api/v1/auth/**",
-            "/api/v1/users/**",
-            "/api/v1/**",
-            "/api/v1/identification-documents/**",
+    private static final String[] WHITE_LIST_URL = {
+            "/api/v1/auth/**",
             "/h2-console/**",
             "/swagger-ui/**",
             "/swagger-ui.html",
             "/v3/api-docs/**",
             "/api-docs/**",
             "/api-docs-ui.html",
-            "/actuator/**"};
+            "/actuator/**"
+    };
     private final JwtAuthenticationFilter jwtAuthFilter;
     private final AuthenticationProvider authenticationProvider;
     private final LogoutHandler logoutHandler;
@@ -45,6 +44,17 @@ public class WebSecurityConfiguration {
                         req.requestMatchers(WHITE_LIST_URL)
                                 .permitAll()
                                 .requestMatchers(HttpMethod.PATCH,"/api/v1/users/**").hasAnyAuthority("USER")
+                                .requestMatchers("/api/v1/transactions/**",
+                                        "/api/v1/staff/**",
+                                        "/api/v1/rooms/**",
+                                        "/api/v1/reviews/**",
+                                        "/api/v1/inventory-items/**",
+                                        "/api/v1/housekeeping/**",
+                                        "/api/v1/events/**",
+                                        "/api/v1/bookings/**",
+                                        "/api/v1/users/**",
+                                        "/api/v1/identification-documents/**",
+                                        "/api/v1/analytics/**").authenticated()
                                 .anyRequest()
                                 .authenticated()
                 )
