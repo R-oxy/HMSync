@@ -1,12 +1,13 @@
 .Forms {
     /* Dimensions */
-    width: 95%;
+    width: 90%;
     height: 50%;
 
     /* Properties */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     overflow-y: auto;
     flex-grow: 0.9;
     padding-bottom: 3%;
@@ -18,6 +19,8 @@
     /* Dimensions */
     /* min-height: 45%; */
     /* border: 1px solid; */
+    /* Dimensions */
+    width: 95%;
 
     /* Properties */
     display: flex;
@@ -25,40 +28,47 @@
 
 .Forms-options {
     /* Border */
-    border: 1px solid rgb(0, 0, 0, 0.1);
-    border-radius: 20px 20px 0px 0px;
-    border-bottom: 1px solid rgb(0, 0, 0, 0.3);
+    border: 2px solid rgb(0, 0, 0, 0.3);
+    border-radius: 10px;
+    /* Dimensions */
 
     /* Properties */
     justify-content: space-evenly;
+    align-items: center;
     flex-wrap: wrap;
     overflow-y: auto;
     min-height: fit-content;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05);
+    flex-grow: 0.55;
 }    
 
 .Forms-DisplayOnly {
     /* border */
     /* border: 1px solid; */
-    border: 1px solid rgb(0, 0, 0, 0.1);
-    border-radius: 20px;
+    border: 2px solid rgb(0, 0, 0, 0.3);
+    border-radius: 10px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.568);
 
     /* Background */
     background-color: white;
 
     /* Dimensions */
-    width: 20%;
+    width: 40%;
     height: fit-content;
-    min-width: 230px;
-    margin: 8px 15px;
-    padding: 20px 10px;
+    min-width: fit-content;
+    /* margin: 0 15px; */
+    padding: 20px;
     
 
     /* properties */
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.darken {
+    background-color: rgba(0, 0, 0, 0.178);
 }
 
 /* -------- Inside Forms-DisplayOnly -------- */
@@ -97,8 +107,14 @@
 /* --------- Forms-create-display -------- */
 .Forms-create-display {
     /* Dimensions */
-    min-width: 100%;
-    min-height: 60%; 
+    min-height: 60%;
+
+    /* Properties */
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    flex-grow: 1;
+
 }
 
 /* Waterfall effects */
@@ -107,5 +123,141 @@
 }
 
 .show-Drawer {
-    display: block;
+    display: flex;
+}
+
+.FormInfo {
+    /* Dimensions */
+    width: 90%;
+    height: 80%;
+
+    /* Properties */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0.8;
+}
+
+.FormInfo:first-child {
+    /* Font */
+    font-size:x-large;
+
+}
+
+
+.FormInfo p {
+    font-size: large;
+}
+
+.Form-actions {
+    /* Dimensions */
+    height: fit-content;
+    width: 85%;
+
+    /* Properties */
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.button-action {
+    /* Background */
+    background-color: white;
+    
+    /* Dimensions */
+    width: fit-content;
+    padding: 3px 20px;
+
+    /* Font */
+    font-size: medium;
+
+    /* Border */
+    border-radius: 10px;
+    border: 1px solid rgba(162, 0, 255, 0.1);
+
+    /* Shadow */
+    box-shadow: 1px 1px 1px black;
+}
+.button-action:hover {
+    background-color: rgba(0, 0, 0, 0.178);
+}
+
+.button-action:active {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* #lighten {
+
+} */
+
+#darken {
+    background-color: var(--background-color-30);
+    color: white;
+}
+/* -------- Form Input -------- */
+.Form-input-container {
+    /* Dimensions */
+    width: 100%;
+    height: 100%;
+
+    /* Properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+.FormInput {
+    /* Border */
+    /* border-radius: 10px; */
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    border-style: none none none solid;
+
+    /* Dimensions */
+    width: 95%;
+    height: fit-content;
+    padding:1em;
+
+    /* Properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: flex-start;
+    overflow-y: auto;
+    flex-grow: 1;
+    font-family: var(--normal-font);
+
+}
+
+.Form-input-container > h4 {
+    /* Dimensions */
+    margin: 0.3em 0;
+    width: 100%;
+    position: sticky;
+    top:0;
+    background-color: white;
+    z-index: 3;
+
+    /* Properties */
+
+}
+
+.FormInput input {
+    /* Border */
+    border: 1px solid rgb(0, 0, 0);
+    border-style: none none solid none;
+
+    /* Dimensions */
+    width: fit-content;
+}
+
+.FormInput label {
+    margin: 0.2em;
+    font-size: large;
+}
+
+.FormInput-click {
+    margin: 0.5em 0;
+    font-size: large;
 }

@@ -1,3 +1,7 @@
+.menu-container {
+    width: 3rem;
+}
+
 .dash-menu-container {
     /* Background */
     background-color: var(--background-color-30);
@@ -5,16 +9,17 @@
     /* Dimensions */
     height: 100%;
     width:fit-content;
-    min-width: 4em;
+    min-width: fit-content;
     /* padding: 10px; */
     left:0;
+    z-index: 10;
     
     
     /* Properties */
     display: flex;
     justify-content: flex-start;
     overflow-y: scroll;
-    /* position: absolute; */
+    position: absolute;
     
     
     
@@ -23,8 +28,14 @@
 }
 
 @media screen and (max-width: 1000px) {
+
+    .menu-container {
+        position: relative;
+        width: 1px;
+    }
     
     .dash-menu-container:hover {
+        display: flex;
         position: absolute;
         z-index: 10;
     }
@@ -72,9 +83,6 @@
 }
 
 .fa {
-    background: none;
-    background-color: transparent;
-    text-decoration: none;
     padding: 0 0.25em;
 }
 
@@ -112,4 +120,5 @@
 .menu-icon {
     /* Font */
     color: white;
+    background-color: transparent;
 }

@@ -6,6 +6,7 @@ import DashHeader from './Header/DashHeader';
 
 
 function HomePage() {
+  const apiPrefix = 'https://api.json-generator.com/templates/';
   return (
 
     <div className="HomePage">
@@ -14,7 +15,7 @@ function HomePage() {
         <div className="Homepage-body">
           <DashHeader />
           <>
-            <Outlet />
+            <Outlet context={apiPrefix}/>
           </>
         </div>
       </div>

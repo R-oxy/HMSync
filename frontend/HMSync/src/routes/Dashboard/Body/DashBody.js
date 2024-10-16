@@ -2,6 +2,7 @@ import { useQuery, useQueryClient } from '@tanstack/react-query';
 import './DashBody.css';
 import DashGraphs from './DashGraphs';
 import DashInfo from './DashInfo';
+import LoadingPage from '../../../LoadingPage/LoadingPage';
 
 
 
@@ -24,7 +25,7 @@ function DashBody() {
 
     
     if (isPending) {
-        return (<span>Loading...</span>)
+        return (<LoadingPage />)
     }
     
     if (isError) {
