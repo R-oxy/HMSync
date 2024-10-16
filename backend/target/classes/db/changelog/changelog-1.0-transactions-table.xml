@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="create-transactions-table" author="aron">
+        <createTable tableName="transactions">
+            <column name="id" type="uuid">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="booking_id" type="uuid">
+                <constraints nullable="false"/>
+            </column>
+            <column name="transaction_date_time" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="transaction_amount" type="decimal(10, 2)">
+                <constraints nullable="false"/>
+            </column>
+            <!-- Audit Fields -->
+            <column name="created_at" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_user" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_user" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="transactions"
+                                 baseColumnNames="booking_id"
+                                 referencedTableName="bookings"
+                                 referencedColumnNames="id"
+                                 constraintName="fk_transactions_booking"/>
+    </changeSet>
+</databaseChangeLog>
