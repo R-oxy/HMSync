@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
     /* LOGIN */
     /* Colors */
@@ -29,12 +33,38 @@
     --white-text-color: rgb(241, 234, 234);
 
 }
-
+::-webkit-scrollbar {
+    display: none;
+  }
 
 html, body, #root {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     margin: 0%;
     padding: 0%;
 }
 
+.NotFound {
+    /* Font size */
+    color: rgba(41, 41, 41, 0.9);
+    font: var(--normal-font);
+    
+
+    /* Properties */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Error-code {
+    /* Font */
+    font-size: 5em;
+}
+
+.Error-paragraph {
+    font-size: large;
+}
+
+.Error-options {
+    font-weight: 600;
+}

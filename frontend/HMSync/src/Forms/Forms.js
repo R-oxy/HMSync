@@ -35,7 +35,7 @@ function Forms({ topInfo, options, label, apiUrl, qkey, identifier }) {
         queryFn: async () => {
             const response = await fetch(apiUrl, {
                 headers: {
-                    Authorization: "Bearer pfjgp2naaesz5aoyq3tnikav3j6d64qbqclw98vs"
+                    Authorization: `Bearer ${process.env.BEARER_TOKEN}`
                 }
             });
             return await response.json();
@@ -78,7 +78,7 @@ function Forms({ topInfo, options, label, apiUrl, qkey, identifier }) {
                     {data.map((x) => {
                         return (
                             <DisplayForms
-                            identifier={identifier} /* id */
+                                identifier={identifier} /* id */
                                 key={x[identifier]}
                                 props={x} /* current object data */
                                 states={{ displayId, setDisplayId, displayProps, setDisplayProps }}
@@ -102,6 +102,7 @@ function Forms({ topInfo, options, label, apiUrl, qkey, identifier }) {
                                     currentObject={displayProps}
                                     httpMethod={action}
                                     setMethod={setAction}
+                                    identifier={identifier}
                                 />
 
                                 :

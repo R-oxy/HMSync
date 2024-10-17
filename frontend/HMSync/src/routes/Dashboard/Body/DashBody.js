@@ -15,7 +15,7 @@ function DashBody() {
             const topDataUrl = "https://api.json-generator.com/templates/qkCOLo8LiuUU/data"
             const response = await fetch(topDataUrl, {
                 headers: {
-                    Authorization: "Bearer pfjgp2naaesz5aoyq3tnikav3j6d64qbqclw98vs"
+                    Authorization: `Bearer ${process.env.BEARER_TOKEN}`
                 }
             });
 

@@ -1,6 +1,10 @@
 const path = require("path");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require('webpack');
+
+require('dotenv').config({path: './.env'});
+
 module.exports = {
   entry: {
     main: path.resolve('./src/index.js')
@@ -99,7 +103,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./dist/index.html",
       filename: "./index.html"
-    })
+    }),
+    new webpack.DefinePlugin({
+      "process.env": JSON.stringify(process.env),
+    }),
   ]
 
 }

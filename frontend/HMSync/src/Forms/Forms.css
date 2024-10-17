@@ -3,13 +3,13 @@
     width: 90%;
     height: 50%;
 
+
     /* Properties */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    overflow-y: auto;
-    flex-grow: 0.9;
+    flex-grow: 0.8;
     padding-bottom: 3%;
 }
 
@@ -24,22 +24,23 @@
 
     /* Properties */
     display: flex;
+    flex-grow: 1;
 }
 
 .Forms-options {
     /* Border */
     border: 2px solid rgb(0, 0, 0, 0.3);
     border-radius: 10px;
+    
     /* Dimensions */
 
     /* Properties */
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     overflow-y: auto;
-    min-height: fit-content;
+    min-height: 40%;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05);
-    flex-grow: 0.55;
 }    
 
 .Forms-DisplayOnly {
@@ -53,7 +54,7 @@
     background-color: white;
 
     /* Dimensions */
-    width: 40%;
+    width: 100%;
     height: fit-content;
     min-width: fit-content;
     /* margin: 0 15px; */

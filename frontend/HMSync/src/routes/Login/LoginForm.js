@@ -1,3 +1,4 @@
+import { useQuery } from '@tanstack/react-query';
 import { useState, useEffect } from 'react';
 import useSignIn from 'react-auth-kit/hooks/useSignIn';
 import { useNavigate, useOutletContext } from 'react-router-dom';
@@ -10,32 +11,50 @@ function LoginForm() {
   const [isDisabled, setIsDisabled] = useState(true);
   const navigate = useNavigate();
   const signIn = useSignIn();
-  const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3Mjg3NzA0MzUsImV4cCI6MTc2MDMwNjQzNSwiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSIsIkdpdmVuTmFtZSI6Ik1pbGxpY2VudCIsIlN1cm5hbWUiOiJCeXN0YW5kZXIifQ.bhiYlqMTDmfZBnrSb3KZHhel_3vl2GG44Vblt9zBoPA';
+  const apiUrl = `${process.env.API_PREFIX}/auth/authenticate`;
 
-  const handleInput = (e) => {
+  /* Fetch request here */
+  
+  console.log();
+  const handleInput =  async (e) => {
     /* handle submission of input */
     e.preventDefault();
 
-    /* Fetch request here */
-
-    /* validate token inside fetch request
-      currently done by placeholder */
-    
-    if (signIn({
-      auth: {
-        token: token,
-        type: 'Bearer',
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": 'application/json'
       },
-      isUsingRefreshToken: true,
-      userState: {username: formData.username},
-    })) {
-      navigate('/');
-    } else {
-      alert('Yikes')
+      body: JSON.stringify({
+        email: formData.username,
+        password: formData.password
+      })
+    });
+
+
+    if (!response.ok){
+      /* Implement an error message till any of the states change */
+      throw new Error(`Response status: ${response.status}`);
     }
-    
-    
+
+    const json = await response.json();
+      if (signIn({
+        auth: {
+          token: json.access_token,
+          type: 'Bearer',
+        },
+        isUsingRefreshToken: true,
+        userState: {username: formData.username},
+      })) {
+        navigate('/');
+    }
+    else {
+      alert("Error");
   }
+}
+    
+    
+    
 
   useEffect(() => {
     setIsDisabled(

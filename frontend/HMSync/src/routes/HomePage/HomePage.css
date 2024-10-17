@@ -43,6 +43,7 @@
     padding: 0%;
     margin: 0%;
     height:100%;
+
     width: 60%;
 
     /* Properties */
@@ -51,6 +52,7 @@
     justify-content:space-between;
     align-items:center;
     flex-grow: 1;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 1000px) {

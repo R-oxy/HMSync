@@ -1,7 +1,6 @@
 import './DashMenu.css';
 import DashMenuItems from './DashMenuItems';
 
-
 function DashMenu() {
     const icons = [
         { id: 1, faName: 'fa-home', name: 'Dashboard', dir: "/Dashboard" },
@@ -10,13 +9,10 @@ function DashMenu() {
         { id: 4, faName: 'fa-user', name: 'Clients', dir: "/Clients" },
         { id: 5, faName: 'fa-star-half', name: 'Reviews', dir: "/Reviews" },
         { id: 6, faName: 'fa-book', name: 'Inventory', dir: "/Inventory-management" },
-        { id: 7, faName: 'fa-id-badge', name: 'Housekeeping', dir: "/Housekeeping" },
+        { id: 7, faName: 'fa-tag', name: 'Housekeeping', dir: "/Housekeeping" },
         { id: 8, faName: 'fa-exchange', name: 'Transactions', dir: "/Transactions" },
         { id: 9, faName: 'fa-user-plus', name: 'Reservations', dir: "/Reservations" },
-        { id: 10, faName: 'fa-tag', name: 'Room Service', dir: "/Room-service" },
-        { id: 11, faName: 'fa-calendar', name: 'Event Management', dir: "/Event-management" },
-        /*
-         */
+        { id: 10, faName: 'fa-calendar', name: 'Event Management', dir: "/Event-management" },
     ];
 
     return (

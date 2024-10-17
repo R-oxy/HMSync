@@ -43,7 +43,7 @@ function FormInput({ currentObject, options = [], httpMethod, setMethod, identif
 
 
     return (<div className="Form-input-container">
-            <h4>{`${httpMethod == "UPDATE" ? 'Updating Id: ' + currentObject.Id : 'New Entry'}`}</h4>
+            <h4>{`${httpMethod == "UPDATE" ? 'Updating Id: ' + currentObject[identifier] : 'New Entry'}`}</h4>
         <form className="FormInput" onSubmit={handleSubmit}>
             {/* TItle label */}
             {/* Number of entries == number of object keys */}

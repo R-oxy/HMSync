@@ -1,25 +1,31 @@
-import { useState, useEffect } from 'react';
-import { Outlet, useNavigate, useParams } from 'react-router-dom';
+import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
 import './HomePage.css';
 import DashMenu from './Menu/DashMenu';
 import DashHeader from './Header/DashHeader';
+import ErrorPage from '../../ErrorPage/ErrorPage';
 
 
 function HomePage() {
-  const apiPrefix = 'https://api.json-generator.com/templates/';
+  const apiPrefix = process.env.DATA_API_URL;
   return (
+    <ErrorPage fallback={"Error retrieving information"}>
+      <Suspense fallback={<p>Retrieving data...</p>}>
 
-    <div className="HomePage">
-      <div className="Homepage-landing">
-        <DashMenu />
-        <div className="Homepage-body">
-          <DashHeader />
-          <>
-            <Outlet context={apiPrefix}/>
-          </>
+        <div className="HomePage">
+          <div className="Homepage-landing">
+            <DashMenu />
+            <div className="Homepage-body">
+              <DashHeader />
+
+              <>
+                <Outlet context={apiPrefix} />
+              </>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </Suspense>
+    </ErrorPage>
   );
 };
 

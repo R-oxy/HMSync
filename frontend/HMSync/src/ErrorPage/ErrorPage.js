@@ -1,17 +1,22 @@
-function ErrorPage() {
-    <div className="Error-Page">
-        <h1 className="Error-Title">
-            Error
-        </h1>
+import React from "react";
 
-        <img src="" alt="" className="Error-pic" />
+class ErrorPage extends React.Component{
+    state = {hasError: false};
 
-        <div className="Error-message"></div>
+    static getDerivedStateFromError(error) {
+        return ({hasError: true});
+    }
 
-        <button className="Error-redirect">
+    componentDidCatch(error, info) {
+        console.log(error, info);
+    }
 
-        </button>
-    </div>
+    render() {
+        if (this.state.hasError) {
+            return (this.props.fallback)
+        }
+        return (this.props.children);
+    }
 }
 
 export default ErrorPage;
