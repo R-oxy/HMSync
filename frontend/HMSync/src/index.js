@@ -10,6 +10,7 @@ import {router, store, queryClient } from "./HMSyncConfigurations";
 
 
 
+
 /* Insert App into DOM */
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
