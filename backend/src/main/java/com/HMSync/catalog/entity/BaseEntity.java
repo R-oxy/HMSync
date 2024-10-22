@@ -31,7 +31,7 @@ public abstract class BaseEntity {
 
     @CreatedBy
     @Column(name = "created_user")
-    private UUID createdUser;
+    private String createdUser;
 
     @LastModifiedDate
     @Column(name = "updated_at")
@@ -39,5 +39,5 @@ public abstract class BaseEntity {
 
     @LastModifiedBy
     @Column(name = "updated_user")
-    private UUID updatedUser;
+    private String updatedUser;
 }

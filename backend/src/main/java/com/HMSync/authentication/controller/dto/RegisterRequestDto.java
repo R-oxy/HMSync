@@ -8,7 +8,6 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 import java.util.Date;
-import java.util.UUID;
 
 @Data
 public class RegisterRequestDto {
@@ -34,9 +33,6 @@ public class RegisterRequestDto {
     private String gender;
 
     private Date dateOfBirth;
-
-    @NotNull(message = "Identification document ID is required")
-    private UUID identificationDocumentId;
 
     @NotBlank(message = "Identification number is required")
     @Size(max = 50)

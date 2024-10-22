@@ -34,13 +34,13 @@
             <column name="created_at" type="timestamp">
                 <constraints nullable="false"/>
             </column>
-            <column name="created_user" type="uuid">
+            <column name="created_user" type="varchar(100)">
                 <constraints nullable="false"/>
             </column>
             <column name="updated_at" type="timestamp">
                 <constraints nullable="false"/>
             </column>
-            <column name="updated_user" type="uuid">
+            <column name="updated_user" type="varchar(100)">
                 <constraints nullable="false"/>
             </column>
         </createTable>

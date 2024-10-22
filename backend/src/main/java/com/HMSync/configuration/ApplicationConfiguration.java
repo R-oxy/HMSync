@@ -17,7 +17,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.Properties;
-import java.util.UUID;
 
 @Configuration
 @RequiredArgsConstructor
@@ -40,7 +39,7 @@ public class ApplicationConfiguration {
     }
 
     @Bean
-    public AuditorAware<UUID> auditorAware() {
+    public AuditorAware<String> auditorAware() {
         return new SpringSecurityAuditorAware();
     }
 

@@ -8,12 +8,10 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
-import java.util.UUID;
-
 @Component
-public class SpringSecurityAuditorAware implements AuditorAware<UUID> {
+public class SpringSecurityAuditorAware implements AuditorAware<String> {
     @Override
-    public Optional<UUID> getCurrentAuditor() {
+    public Optional<String> getCurrentAuditor() {
         Authentication authentication =
                 SecurityContextHolder
                         .getContext()
@@ -24,8 +22,8 @@ public class SpringSecurityAuditorAware implements AuditorAware<UUID> {
         ) {
             return Optional.empty();
         }
-
         User userPrincipal = (User) authentication.getPrincipal();
-        return Optional.ofNullable(userPrincipal.getUserId());
+        String fullName = userPrincipal.getFirstName() + " " + userPrincipal.getLastName();
+        return Optional.ofNullable(fullName);
     }
 }
