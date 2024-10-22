@@ -6,14 +6,14 @@ function FormInfo({ options, props, label }) {
 
                     if (value === label) {
                         return (
-                            <h3 className="label-main" key={value}>{props[value]}</h3>
+                            <h3 className="label-main" key={value}>{(props[value] ? props[value] : 'Loading data...')}</h3>
                         );
                     } else
                     return (
                         <div className="label-additional " key={value} >
                             <h4 className="wrap-class">{`${key}: `}</h4>
                             &nbsp;
-                            <p className="wrap-class">{` ${props[value]}`}</p>
+                            <p className="wrap-class">{` ${(props[value] ? props[value] : 'Loading data...')}`}</p>
                         </div>
                     );
                 })

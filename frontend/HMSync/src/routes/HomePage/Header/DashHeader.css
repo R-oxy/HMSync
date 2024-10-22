@@ -69,6 +69,8 @@
 }
 
 .logout-tag {
+    /* Background */
+    background-color: white;
     /* Border */
     border: 1px solid;
     border-radius: 10px;
@@ -77,11 +79,18 @@
     width: 6em;
     height: fit-content;
     position: absolute;
+    right: 0;
+    top: 4em;
+    width: 200px;
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     /* Properties */
     display: none;
     flex-direction: column;
-    align-items: center;
+    justify-items: flex-start;
+    align-items: flex-start;
     box-shadow: 4px 4px 1px rgb(145, 144, 144);
 }
 
@@ -94,7 +103,7 @@
     border-radius: 5px;
 
     /* Dimensions */
-    width: 80%;
+    width: 90%;
     margin-bottom: 0.5em;
 
     box-shadow: 1px 1px 1px var(--background-color-30);
@@ -105,6 +114,8 @@
     /* Properties */
     display: flex;
     justify-content: center;
+    align-self: center;
+    justify-self: flex-end;
 }
 
 .logout-tag p {
@@ -112,6 +123,10 @@
     font-size: medium;
     font-weight: 700;
     text-align: center;
+    margin: 0.5em;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .logout-tag button:active {

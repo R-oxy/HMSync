@@ -262,3 +262,40 @@
     margin: 0.5em 0;
     font-size: large;
 }
+
+.delete-drawer {
+    /* Border*/
+    border: 2px solid rgb(0, 0, 0, 0.3);
+    border-radius: 10px;
+    /* Dimensions */
+    width: 85%;
+    height: fit-content;
+    /* max-height: 2em; */
+
+    /* Properties */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 1em;
+}
+
+.show-delete-drawer {
+    display: initial;
+}
+
+.hide-delete-drawer {
+    display: none;
+}
+
+.delete-drawer p {
+    margin: 0.25em;
+    overflow-y:auto;
+    height: 1.5em;
+}
+
+.delete-drawer p::-webkit-scrollbar {
+    display: visible;
+}
+
+.delete-drawer h3 {
+    margin: 0.25em;
+}

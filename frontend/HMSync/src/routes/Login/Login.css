@@ -135,6 +135,7 @@
 [for^="credential-"] span {
     
     /* Dimensions */
+    display: block;
     bottom: 75%;
     padding: 0% 1%;
     z-index: 6;

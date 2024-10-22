@@ -28,7 +28,8 @@ function LoginForm() {
       body: JSON.stringify({
         email: formData.username,
         password: formData.password
-      })
+      }),
+
     });
 
 
@@ -71,12 +72,12 @@ function LoginForm() {
       <label htmlFor="credential-username">
         <span>
 
-          Username
+          Email
         </span>
         <input
           type="text"
           id="credential-username"
-          name="Username"
+          name="Email"
           onChange={
             (e) => setFormData({ ...formData, username: e.target.value })
           } />

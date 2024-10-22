@@ -21,7 +21,6 @@ function DashHeader() {
         setDisplaySet(displaySet == 'initial' ? 'none': 'initial');
     }
     const logoutFunc = () => {
-        alert("Logging you out");
         signOut();
         navigate('/login');
         
@@ -60,7 +59,9 @@ function DashHeader() {
                     <img src={avatar} alt="account avatar" />
                     {/* Avatar */}
                     <div className="logout-tag" style={{display: flexSet}}>
-                        <p>{auth.username}{/* Millicent Bystander */}</p>
+                        <p>{`${auth.username}`}{/* Millicent Bystander */}</p>
+                        <p>Settings</p>
+                        <p>Account</p>
                         <button onClick={logoutFunc}>logout</button>
                     </div>
                     {/* OnClick, drop down account options */}
