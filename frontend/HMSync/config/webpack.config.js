@@ -13,7 +13,7 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.join(__dirname, '..', 'build'),
     filename: 'bundle.js'
   },
 
@@ -114,6 +114,9 @@ module.exports = {
   ]
 
 }
+
+console.log('Output Directory:', path.join(__dirname, '..', 'build'));
+
 
 /* 
 entry:
