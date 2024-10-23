@@ -1,0 +1,18 @@
+@keyframes loading-animation {
+    from {
+        background-image: linear-gradient(white, rgb(199, 196, 196), white, rgb(199, 196, 196));
+    }
+    to {background-image: linear-gradient(rgb(199, 196, 196), white, rgb(199, 196, 196), white,);}
+
+    
+}
+
+.loading {
+    animation-name: loading-animation;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+
+    /* Dimensions */
+    width: 100%;
+    height: 100%;
+}

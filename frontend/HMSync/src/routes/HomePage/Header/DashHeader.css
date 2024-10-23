@@ -1,0 +1,167 @@
+/* -------- Dashboard: Header -------- */
+.filler-space {
+    width: 100%;
+    height: 100%;
+    /* Properties */
+    display: flex;
+    flex-grow: 10;
+}
+
+/* -------- Header Logo -------- */
+.header-logo {
+    /* Dimensions */
+    width: 13%;
+    height: 100%;
+    min-width: fit-content;
+    padding-left: 10px;
+
+    /* Properties */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header-logo img {
+    /* Dimensions */
+    height: 60%;
+    margin: auto;
+
+    /* Properties */
+    
+}
+
+/* -------- Header avatar & notification bell -------- */
+.header-avatar-notifications {
+    /* Dimensions */
+    width: 10%;
+    min-width: fit-content;
+    height: 100%;
+    margin-right: 2%;
+    position: relative;
+
+    /* Border */
+    /* border: 1px solid var(--border-outline-color); */
+
+    /* Properties */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-shrink: 0.1;
+}
+
+    /* -------- Notification bell -------- */
+/* .header-notifications {
+    
+} */
+
+    /* -------- Avatar -------- */
+.header-avatar {
+    height: 60%;
+}
+
+.header-avatar > img {
+    height: 100%;
+}
+
+.header-avatar > img:hover {
+    opacity: 0.7;
+}
+
+.logout-tag {
+    /* Background */
+    background-color: white;
+    /* Border */
+    border: 1px solid;
+    border-radius: 10px;
+
+    /* Dimensions */
+    width: 6em;
+    height: fit-content;
+    position: absolute;
+    right: 0;
+    top: 4em;
+    width: 200px;
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    /* Properties */
+    display: none;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: flex-start;
+    box-shadow: 4px 4px 1px rgb(145, 144, 144);
+}
+
+.logout-tag button {
+    /* Background */
+    background-color: var(--background-color-30);
+
+    /* Border */
+    border-color: transparent;
+    border-radius: 5px;
+
+    /* Dimensions */
+    width: 90%;
+    margin-bottom: 0.5em;
+
+    box-shadow: 1px 1px 1px var(--background-color-30);
+
+    /* Font */
+    color: white;
+
+    /* Properties */
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    justify-self: flex-end;
+}
+
+.logout-tag p {
+    font: var(--header-text-color);
+    font-size: medium;
+    font-weight: 700;
+    text-align: center;
+    margin: 0.5em;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.logout-tag button:active {
+    box-shadow: none;
+}
+/* .header-notifications {
+    position: relative;
+} */
+.notification-tag {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+
+    /* background */
+    background-color: var(--background-color-60);
+
+    /* Dimensions */
+    position: absolute;
+    top: 5em;
+    z-index: 10;
+    width: 100%;
+    height: fit-content;
+
+    /* Shadows */
+    box-shadow: 1px 1px 1px var(--header-text-color);
+}
+
+.notification-tag p {
+    font: var(--header-text-color);
+    font-size: medium;
+    font-weight: 700;
+    text-align: center;
+}
+
+.header-notifications i:hover {
+    opacity: 0.7;
+}

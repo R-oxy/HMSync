@@ -1,0 +1,70 @@
+.HomePage {
+    /* dimensions */
+    height: 100vh;
+    width: 100vw;
+    padding: 0%;
+    margin: 0%;
+
+    /* color */
+    background-color: var(--background-color-60);
+
+    /* properties */
+    display: flex;
+    font-family: var(--header-font-family);
+    font-size: var(--header-font-size);
+}
+
+.Homepage-landing {
+    /* Background */
+    background-color: var(--background-color-60);
+    
+    /* Border */
+   /*  border-radius: 20px; */
+    box-shadow: 4px 4px 10px var(--border-outline-color);
+    /* border: 1px solid  var(--border-outline-color); */
+
+    /* Dimensions */
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+
+    /* Font */
+    font: var(--normal-font);
+
+    /* Properties */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.Homepage-body {    
+    /* Dimensions */
+    padding: 0%;
+    margin: 0%;
+    height:100%;
+
+    width: 60%;
+
+    /* Properties */
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+    .Homepage-body {
+        width: 90%;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .Homepage-body {
+        width: 80%;
+    }
+    
+}

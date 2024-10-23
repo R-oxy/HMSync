@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* LOGIN */
+    /* Colors */
+    --homepage-background-color: rgba(219, 232,244, 0.9);
+    --background-color-60: rgba(255, 255, 255, 90%);
+    --background-color-30: rgba(96, 43, 248, 0.9);/* rgba(102, 76, 219, 70%); #A796F2 */
+    --background-gradient-30: #FB81A0;
+    --menu-background-color: #602bf8;
+    --dashboard-background-color: white;
+    /* background-color: */ 
+
+
+    /* Fonts */
+    --header-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    --header-font-size: medium;
+    --normal-font: "Inter", sans-serif;
+    
+    /* Borders */
+    --border-outline-color: rgba(0, 0, 0, 0.2);
+    --header-border-color: rgba(0, 0, 0, 0.2);
+    
+    /* Shadow */
+    --main-shadow-color: 5px 5px 10px #bbbac0;
+    --small-windows-shadows: 4px 4px 10px rgba(0, 0, 0, 0.568);
+    
+    /* Text */
+    --credentials-text-color: #3a3a3a;
+    --header-text-color: rgba(17, 17, 17, 0.7);
+    --white-text-color: rgb(241, 234, 234);
+
+}
+::-webkit-scrollbar {
+    display: none;
+  }
+
+html, body, #root {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.NotFound {
+    /* Font size */
+    color: rgba(41, 41, 41, 0.9);
+    font: var(--normal-font);
+    
+
+    /* Properties */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Error-code {
+    /* Font */
+    font-size: 5em;
+}
+
+.Error-paragraph {
+    font-size: large;
+}
+
+.Error-options {
+    font-weight: 600;
+}

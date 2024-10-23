@@ -1,0 +1,143 @@
+/* -------- Dashboard: Main body -------- */
+.Dash-body {
+    /* Dimensions */
+    width: 100%;
+    height: 100%;
+
+    /* Properties */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* General targeting */
+[class^="display-"] {
+    /* Dimensions */
+    width: 100%;
+
+    /* Border */
+    /* border: 1px solid; */
+}
+
+[class^="display-container-"] {
+    /* Border */
+    border-radius: 10px;
+    
+    /* Dimensions */
+     height: 95%;
+     width: 70%;
+
+     /* Properties */
+     display: flex;
+     overflow-x: scroll;
+     overflow-y: hidden;
+     /* justify-content: space-between; */
+     flex-grow: 1;
+}
+
+/* -------- Dashboard: Top section -------- */
+.display-top {
+    /* Dimensions */
+    height: 40%;
+    max-height: 40%;
+} 
+
+.display-top, .display-bottom {
+    min-height: 250px;
+
+    /* Properties */
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    overflow-x: auto;
+    margin: 10px 0;
+}
+
+.display-container-top {
+    min-height: 260px;
+
+
+}
+
+.dashboard-info {
+    /* Border */
+    border-radius: 20px;
+    border: 1px rgba(0, 0, 0, 0.1);
+
+    /* Dimensions */
+    height: 90%;
+    width: 20%;
+    margin: 10px;
+    min-width: 280px;
+    min-height: 230px;
+
+    /* Properties */
+    display: flex;
+    justify-content: center;
+    flex-grow: 0.23;
+
+    /* Shadows */
+    box-shadow: var(--small-windows-shadows);
+}
+
+.dashboard-info-container {
+    height: 95%;
+    width: 90%;
+
+    /* Property */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dashboard-info-header {
+    padding: 0%;
+    margin: 0%;
+}
+
+.dashboard-value {
+    /* Dimensions */
+    padding: 0%;
+    margin: 0%;
+    font-size: xx-large;
+    font-weight: 800;
+}
+
+.dashboard-definition {
+    font-size: small;
+    color: var(--credentials-text-color);
+    padding: 0%;
+    margin: 0%;
+}
+
+.dashboard-percentage {
+    height: 1rem;
+    width: 95%;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+.dashboard-bar {
+    height: 100%;
+    border-radius: inherit;
+    background-color: var(--background-color-30);
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* -------- Dashboard: Bottom section -------- */
+.display-bottom {
+    height: 60%;
+    min-height: 300px;
+}
+
+.display-container-bottom {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}

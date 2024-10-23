@@ -1,0 +1,301 @@
+.Forms {
+    /* Dimensions */
+    width: 90%;
+    height: 50%;
+
+
+    /* Properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 0.8;
+    padding-bottom: 3%;
+}
+
+.Forms-options, .Forms-create-display {
+    /* Background */
+    /* background-color: rgb(226, 223, 223, 0.1); */
+    /* Dimensions */
+    /* min-height: 45%; */
+    /* border: 1px solid; */
+    /* Dimensions */
+    width: 95%;
+
+    /* Properties */
+    display: flex;
+    flex-grow: 1;
+}
+
+.Forms-options {
+    /* Border */
+    border: 2px solid rgb(0, 0, 0, 0.3);
+    border-radius: 10px;
+    
+    /* Dimensions */
+
+    /* Properties */
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    min-height: 40%;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05);
+}    
+
+.Forms-DisplayOnly {
+    /* border */
+    /* border: 1px solid; */
+    border: 2px solid rgb(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.568);
+
+    /* Background */
+    background-color: white;
+
+    /* Dimensions */
+    width: 100%;
+    height: fit-content;
+    min-width: fit-content;
+    /* margin: 0 15px; */
+    padding: 20px;
+    
+
+    /* properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.darken {
+    background-color: rgba(0, 0, 0, 0.178);
+}
+
+/* -------- Inside Forms-DisplayOnly -------- */
+[class^="label-"] {
+    /* DImensions */
+    margin: 0;
+    padding: 0;
+    
+    /* Properties */
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.wrap-class {
+    display: flex;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-wrap: nowrap;
+    font: var(--normal-font);
+    font-weight: 500;
+    padding: 4px 0;
+    margin: 0;
+}
+
+.label-additional > h4 {
+    font-weight: 700;
+}
+
+.form-search {
+    height: 100px;
+    display: block;
+}
+
+/* --------- Forms-create-display -------- */
+.Forms-create-display {
+    /* Dimensions */
+    min-height: 60%;
+
+    /* Properties */
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    flex-grow: 1;
+
+}
+
+/* Waterfall effects */
+.display-off, .hide-Drawer {
+    display: none;
+}
+
+.show-Drawer {
+    display: flex;
+}
+
+.FormInfo {
+    /* Dimensions */
+    width: 90%;
+    height: 80%;
+
+    /* Properties */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0.8;
+}
+
+.FormInfo:first-child {
+    /* Font */
+    font-size:x-large;
+
+}
+
+
+.FormInfo p {
+    font-size: large;
+}
+
+.Form-actions {
+    /* Dimensions */
+    height: fit-content;
+    width: 85%;
+
+    /* Properties */
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.button-action {
+    /* Background */
+    background-color: white;
+    
+    /* Dimensions */
+    width: fit-content;
+    padding: 3px 20px;
+
+    /* Font */
+    font-size: medium;
+
+    /* Border */
+    border-radius: 10px;
+    border: 1px solid rgba(162, 0, 255, 0.1);
+
+    /* Shadow */
+    box-shadow: 1px 1px 1px black;
+}
+.button-action:hover {
+    background-color: rgba(0, 0, 0, 0.178);
+}
+
+.button-action:active {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* #lighten {
+
+} */
+
+#darken {
+    background-color: var(--background-color-30);
+    color: white;
+}
+/* -------- Form Input -------- */
+.Form-input-container {
+    /* Dimensions */
+    width: 100%;
+    height: 100%;
+
+    /* Properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+.FormInput {
+    /* Border */
+    /* border-radius: 10px; */
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    border-style: none none none solid;
+
+    /* Dimensions */
+    width: 95%;
+    height: fit-content;
+    padding:1em;
+
+    /* Properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: flex-start;
+    overflow-y: auto;
+    flex-grow: 1;
+    font-family: var(--normal-font);
+
+}
+
+.Form-input-container > h4 {
+    /* Dimensions */
+    margin: 0.3em 0;
+    width: 100%;
+    position: sticky;
+    top:0;
+    background-color: white;
+    z-index: 3;
+
+    /* Properties */
+
+}
+
+.FormInput input {
+    /* Border */
+    border: 1px solid rgb(0, 0, 0);
+    border-style: none none solid none;
+
+    /* Dimensions */
+    width: fit-content;
+}
+
+.FormInput label {
+    margin: 0.2em;
+    font-size: large;
+}
+
+.FormInput-click {
+    margin: 0.5em 0;
+    font-size: large;
+}
+
+.delete-drawer {
+    /* Border*/
+    border: 2px solid rgb(0, 0, 0, 0.3);
+    border-radius: 10px;
+    /* Dimensions */
+    width: 85%;
+    height: fit-content;
+    /* max-height: 2em; */
+
+    /* Properties */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 1em;
+}
+
+.show-delete-drawer {
+    display: initial;
+}
+
+.hide-delete-drawer {
+    display: none;
+}
+
+.delete-drawer p {
+    margin: 0.25em;
+    overflow-y:auto;
+    height: 1.5em;
+}
+
+.delete-drawer p::-webkit-scrollbar {
+    display: visible;
+}
+
+.delete-drawer h3 {
+    margin: 0.25em;
+}

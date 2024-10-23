@@ -1,0 +1,9 @@
+# node_modules
+node_modules/*
+
+#Test token & login info
+authentication_info.json
+token_info.json
+
+# .env 
+.env

@@ -1,0 +1,19 @@
+/* -------- Dashboard -------- */
+
+
+/* -------- Dashboard: Dashboard-header -------- */
+.Dash-header {
+    /* Dimensions */
+    height: 10%;
+    width: 100%;
+
+    /* Properties */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+/* -------- Dashboard: Dashboard-body -------- */

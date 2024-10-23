@@ -1,0 +1,224 @@
+/* -------- LOGIN -------- */
+
+.Display-container {
+    /* dimensions */
+    height: inherit;
+    width: inherit;
+    padding: 0%;
+    margin: 0%;
+
+    /* color */
+    background-color: var(--background-color-60);
+
+    /* properties */
+    display: flex;
+}
+
+.Login {
+    /* Border */
+    background-image: linear-gradient(45deg, var(--background-gradient-30), var(--background-color-30), var(--background-color-30), var(--background-gradient-30), var(--background-gradient-30));
+    background-size: cover;
+    background-position: center;
+    border-radius: 2.5em;
+
+    /* Dimensions */
+    /* min-width: 400px;
+    min-height: 300px; */
+    height: calc(100% * 6/10);
+    width: calc(100% * 5/10);
+    padding: 0%;
+    margin: auto;
+    overflow: auto;
+
+    /* Properties */
+    position: relative;
+    /* Shadow */
+    box-shadow: var(--main-shadow-color);
+}
+
+.Login>img {
+    /* Dimensions */
+    position: absolute;
+    width: 47%;
+    height: calc(100% * 0.66);
+    z-index: 3;
+    margin-top: 10%;
+    margin-left: 12%;
+}
+
+/* -------- White container -------- */
+
+/* -------- White container: Head -------- */
+.Login-white {
+    /* Background */
+    background-color: var(--background-color-60);
+
+    /* Border */
+    border-radius: 2.5em;
+
+    /* Dimensions */
+    height: 100%;
+    margin-left: auto;
+    position: relative;
+    width: calc(100% * 5.5/10);
+
+    /* Properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Login-white img {
+    display: flex;
+    /* position: absolute; */
+    width: fit-content;
+    height: 15%;
+    top: 0;
+    align-self: center;
+    z-index: 5;
+    opacity: 70%;
+
+}
+
+.Login-header {
+    /* Dimensions */
+    width: calc(1 - 0.13);
+    height: calc(100% * 1/8);
+    margin: 0%;
+    padding: 0%;
+    z-index: 4;
+
+    /* Properties */
+    display: flex;
+    align-items: center;
+}
+
+.Login-header p {
+    /* Dimensions */
+    width: 80%;
+    height: fit-content;
+    margin-left: 13%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    color: var(--header-text-color);
+    font-family: var(--header-font-family);
+    font-weight: 600;
+}
+
+/* -------- White container: Form -------- */
+.Login-credentials {
+    /* Dimensions */
+    height: calc(100% * 3/5);
+    width: 100%;
+}
+
+.Login-input {
+    /* Dimensions */
+    height: 100%;
+    width: 80%;
+    margin-left: 13%;
+
+    /* Properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+[for^="credential-"] {
+    /* Dimensions */
+    position: relative;
+    width: 100%;
+    height: 15%;
+    z-index: 10;
+}
+
+[for^="credential-"] span {
+    
+    /* Dimensions */
+    display: block;
+    bottom: 75%;
+    padding: 0% 1%;
+    z-index: 6;
+
+    /* Font */
+    color: var(--header-text-color);
+    font-size: 1em;
+    font-weight: 700;
+    font-family: var(--normal-font);
+}
+
+[for^="credential-"] input {
+    /* Border */
+    border: 1px solid var(--border-outline-color);
+    border-radius: 5px;
+
+    /* Dimensions */
+    width: 80%;
+    height: 100%;
+}
+
+[for^="credential-"] input:focus {
+    opacity: 90%;
+}
+
+[for^="credential-"] input:hover {
+    opacity: 90%;
+}
+
+.Credential-submit {
+    /* Background */
+    background-color: var(--background-color-30);
+
+    /* Border */
+    border: none;
+    border-radius: 5px;
+
+    /* Dimensions */
+    width: 40%;
+    height: 20%;
+
+    /* Font */
+    font-family: var(--header-font-family);
+    font-size: large;
+    font-weight: 600;
+    color: var(--white-text-color);
+
+    /* Shadow */
+    box-shadow: var(--main-shadow-color);
+}
+
+.Credential-submit:hover {
+    /* background */
+    background-color: var(--background-color-30);
+    opacity: 70%;
+}
+
+.Credential-submit:active {
+    opacity: 90%;
+}
+
+/* -------- Responsive modifications: Login -------- */
+@media screen and (max-width: 600px) {
+    .Login {
+        height: 50%;
+        width: 80%;
+        min-height: 350px;
+    }
+
+    .Login > img {
+        display: none;
+    }
+
+    .Login-white {
+        width: 100%;
+        opacity: 70%;
+    }
+    
+}
+
+@media screen and (min-height: 800px) and (max-width: 1300px) {
+    .Login {
+        height: 40%;
+    }
+    
+}
