@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_DB: hmsdb
+      POSTGRES_USER: ${SPRING_DATASOURCE_USERNAME}
+      POSTGRES_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  hmsync:
+    image: hmsync:latest
+    container_name: hmsync
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/hmsdb
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+      APP_SMTP_PASSWORD: ${APP_SMTP_PASSWORD}
+      APPLICATION_SECURITY_JWT_SECRET_KEY: ${APPLICATION_SECURITY_JWT_SECRET_KEY}
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+
+volumes:
+  postgres_data:
