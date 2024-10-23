@@ -1,8 +1,9 @@
 import { useMutation } from "@tanstack/react-query";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function FormInput({ currentObject, options = [], httpMethod, setMethod, identifier }) {
     const [newData, setNewData] = useState({});
+    const [formInput, setFormInput] = useState('disabled');
 
     /* const dataModification = useMutation({
         mutationFn: async (newSubmission) => {

@@ -19,6 +19,7 @@ function Forms({ topInfo, options, label, apiUrl, qkey, identifier }) {
     const [action, setAction] = useState('');
     const [deleteState, setDeleteState] = useState('lighten');
     const [deletionItems, setDeletionItems] = useState([]);
+    const [returnItems, setReturnItems] = useState([]);
 
     // HTTP method setting on click
     const setMode = (x) => {
@@ -47,6 +48,10 @@ function Forms({ topInfo, options, label, apiUrl, qkey, identifier }) {
 
     const runDelete = () => {
         /* React mutation deletion */
+        if (deletionItems.length > 0) {
+            setReturnItems(...deletionItems);
+        }
+        
         alert('deleted entries');
         setDeletionItems([]);
     };
@@ -96,16 +101,19 @@ function Forms({ topInfo, options, label, apiUrl, qkey, identifier }) {
                 <div className="Forms-options">
                     {/* Info displayed on the top section */}
                     {data.map((x) => {
-                        return (
-                            <DisplayForms
+                        
+
+                            return (
+                                <DisplayForms
                                 identifier={identifier} /* id */
                                 key={x[identifier]}
                                 props={x} /* current object data */
                                 states={{ displayId, setDisplayId, displayProps, setDisplayProps, deletionItems, setDeletionItems, action }}
                                 options={topInfo} /* Display options of current data */
                                 label={label} /* Which of the top options should be displayed */
-                            />
-                        )
+                                />
+                            )
+                        
                     })}
                 </div>
                 {/* Extra information Display drawer */}
