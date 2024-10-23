@@ -6,6 +6,7 @@ This is a Hotel Management System project built using React and Webpack.
 ## Table of Contents
 - [Installation](#installation)
 - [Scripts](#scripts)
+- [Setup](#setup)
 - [Dependencies](#dependencies)
 - [Dev Dependencies](#dev-dependencies)
 - [License](#license)
@@ -48,6 +49,16 @@ npm scripts are:
   npm run check-build-dependencies
   ```
 
+## Setup
+To serve the files after building:
+install serve via
+  ```bash
+  npm install -g serve
+  ```
+then switch to the frontend directory (if not there) and run 
+  ```bash
+  serve -s build
+  ```
 ## Dependencies
 
 The main dependencies used:
