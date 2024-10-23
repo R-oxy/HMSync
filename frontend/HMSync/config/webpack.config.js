@@ -1,3 +1,5 @@
+
+
 const path = require("path");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -11,7 +13,7 @@ module.exports = {
   },
 
   output: {
-    path: '/'/* path.resolve(__dirname, 'dist') */,
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
 
@@ -20,13 +22,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(m?js|jsx)$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
             presets: [
-              ["@babel/preset-env", { "targets": { "node": "current" } }],
+              ["@babel/preset-env"],
               ["@babel/preset-react", { "runtime": "automatic" }]
             ]
           }
@@ -41,9 +43,10 @@ module.exports = {
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         type: "asset/resource",
-        /* use: ['file-loader'] */
+        // use: ['file-loader']
       },
     ],
+    
   },
 
   optimization: {
@@ -95,7 +98,7 @@ module.exports = {
     static: path.resolve(__dirname, 'dist'),
     open: true,
     port: 5021,
-    /* enables Webpack to utilize routes */
+    // enables Webpack to utilize routes
     historyApiFallback: true
   },
 
